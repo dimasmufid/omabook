@@ -1,8 +1,8 @@
 # Omabook
 
 A small, local EPUB reader for Omarchy. Omabook follows the active Omarchy
-theme while you read and remembers your place. The reader is a desktop
-application; this repository also includes an optional Omarchy bar launcher.
+theme while you read and remembers your place. It is a desktop application,
+not a Quickshell plugin.
 
 ## What it does
 
@@ -45,22 +45,6 @@ This installs the binary in `~/.local/bin`, the desktop entry in
 those three installed files to uninstall. It leaves reading state in
 `~/.local/share/Dimas Mufid/omabook` for the reader to decide whether to keep.
 Open **Omabook** from the Omarchy app launcher, or run `omabook` in a terminal.
-
-## Omarchy bar plugin
-
-The optional plugin adds one book icon to the Omarchy bar. Clicking it opens
-the installed desktop app. Omarchy's plugin installer does not build or
-install desktop applications, so install Omabook with the steps above first.
-Then add and enable the launcher:
-
-```bash
-omarchy plugin add https://github.com/dimasmufid/omabook.git --yes
-omarchy plugin enable dimasmufid.omabook --section left
-```
-
-To remove the bar launcher, run `omarchy plugin remove dimasmufid.omabook`.
-The desktop app remains installed until you remove its three user-local files
-described above.
 
 ## Controls
 

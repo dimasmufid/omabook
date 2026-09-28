@@ -4,8 +4,8 @@ Status: Implemented for v1
 Last updated: 2026-09-28
 
 Omabook is a small, local EPUB reader for Omarchy. It is a standalone desktop
-application with an optional Quickshell bar launcher. The reader still runs as
-its own window; installation uses an app binary and desktop entry.
+application, not a Quickshell plugin. The directory name under `plugins/` is a
+workspace convention; installation will use an app binary and desktop entry.
 
 ## Documents
 
