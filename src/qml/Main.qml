@@ -122,16 +122,6 @@ ApplicationWindow {
         Rectangle { anchors.fill: parent; color: omarchyTheme.background }
 
         Label {
-            visible: !reader.hasBook && !reader.loading
-            x: Math.max(win.px(24), (parent.width - width) / 2)
-            y: win.px(58)
-            width: Math.min(win.px(680), parent.width - win.px(48))
-            text: "Open an EPUB to read."
-            color: win.muted
-            font.family: "serif"
-            font.pixelSize: win.px(20)
-        }
-        Label {
             visible: reader.loading
             anchors.centerIn: parent
             text: "Opening…"
@@ -267,9 +257,6 @@ ApplicationWindow {
                 FooterIconButton { iconName: "folder"; iconColor: win.muted; uiScale: win.textScale; tooltip: "Open EPUB (Ctrl+O)"; onClicked: openDialog.open() }
                 FooterIconButton { iconName: "contents"; iconColor: win.muted; uiScale: win.textScale; enabled: reader.hasBook; tooltip: "Contents (Ctrl+T)"; onClicked: win.openContents() }
                 FooterIconButton { iconName: "search"; iconColor: win.muted; uiScale: win.textScale; enabled: reader.hasBook; tooltip: "Search (Ctrl+F)"; onClicked: win.openSearch() }
-                FooterIconButton { iconName: "minus"; iconColor: win.muted; uiScale: win.textScale; enabled: reader.hasBook; tooltip: "Smaller text (Ctrl+-)"; onClicked: reader.setFontSize(reader.fontSize - 1) }
-                FooterIconButton { iconName: "plus"; iconColor: win.muted; uiScale: win.textScale; enabled: reader.hasBook; tooltip: "Larger text (Ctrl++)"; onClicked: reader.setFontSize(reader.fontSize + 1) }
-                FooterIconButton { iconName: "fullscreen"; iconColor: win.muted; uiScale: win.textScale; tooltip: "Full screen (F11)"; onClicked: win.visibility = win.visibility === Window.FullScreen ? Window.Windowed : Window.FullScreen }
                 Label {
                     visible: reader.hasBook
                     text: reader.chapterTitle

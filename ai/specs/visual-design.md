@@ -25,7 +25,7 @@ animation, or app-specific color theme picker.
 │                 Images fit inside that same column.               │
 │                                                                   │
 │                                                                   │
-│  [folder] [contents] [search] [−] [+] [fullscreen]  chapter    34% │
+│  [folder] [contents] [search]                 chapter    34% │
 └───────────────────────────────────────────────────────────────────┘
 ```
 
@@ -35,12 +35,12 @@ within the current chapter. The window uses the active Omarchy `background`
 color, with no distinct page card. Default reading text is 20 px generic
 serif, 155% line height, and semantic headings, emphasis, lists, quotes, and
 links. Images preserve aspect ratio and fit a narrow window. Desktop text
-scale multiplies the default size; the footer `−` and `+` controls adjust the
-reader's font size between 14 and 32 px at scale 1.
+scale multiplies the default size; keyboard shortcuts adjust the reader's font
+size between 14 and 32 px at scale 1.
 
-The empty window has one quiet line near the top of the same column: `Open an
-EPUB to read.` The folder icon remains available at the bottom left. Loading
-shows a small `Opening…` label without replacing a currently open book.
+The empty window has no prompt or book content. The folder icon at the bottom
+left is the only enabled control until a book opens. Loading shows a small
+`Opening…` label without replacing a currently open book.
 
 ## Footer
 
@@ -53,12 +53,10 @@ subtle opacity. From left to right:
 | Folder | Open a local EPUB through the XDG portal file picker |
 | Contents | Toggle the current book's table of contents |
 | Search | Search the current book |
-| Minus / plus | Decrease / increase reading size |
-| Full screen | Toggle full screen |
 | Chapter label | Passive current-chapter context, elided when space is tight |
 | Percentage at far right | Approximate book progress, based on source text |
 
-Controls that require a book are dimmed until one is open. All icons have
+Contents and search are dimmed until a book is open. All icons have
 tooltips and accessible names. The footer remains visible during scrolling.
 There is no dropdown containing additional actions.
 
@@ -113,5 +111,6 @@ copied by the app.
 2. The folder icon opens an EPUB; an opened chapter renders in a centered,
    readable column at wide and narrow window sizes.
 3. Light and dark Omarchy palette changes update the same text in place.
-4. Contents, search, font adjustment, and full screen work by mouse and
-   keyboard; footer controls remain discernible at 150% desktop text scale.
+4. Contents and search work by mouse and keyboard; font adjustment and full
+   screen remain available through keyboard shortcuts. Footer controls remain
+   discernible at 150% desktop text scale.

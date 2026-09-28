@@ -42,15 +42,6 @@ Item {
             } else if (control.iconName === "search") {
                 c.arc(6.5, 6.5, 4, 0, Math.PI * 2)
                 c.moveTo(9.5, 9.5); c.lineTo(13.5, 13.5)
-            } else if (control.iconName === "minus") {
-                c.moveTo(3, 8); c.lineTo(13, 8)
-            } else if (control.iconName === "plus") {
-                c.moveTo(3, 8); c.lineTo(13, 8); c.moveTo(8, 3); c.lineTo(8, 13)
-            } else if (control.iconName === "fullscreen") {
-                c.moveTo(2.5, 6); c.lineTo(2.5, 2.5); c.lineTo(6, 2.5)
-                c.moveTo(10, 2.5); c.lineTo(13.5, 2.5); c.lineTo(13.5, 6)
-                c.moveTo(13.5, 10); c.lineTo(13.5, 13.5); c.lineTo(10, 13.5)
-                c.moveTo(6, 13.5); c.lineTo(2.5, 13.5); c.lineTo(2.5, 10)
             }
             c.stroke()
         }

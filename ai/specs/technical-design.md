@@ -121,8 +121,8 @@ and qmake; runtime also needs an XDG desktop portal for the file picker.
 - A six-book public-domain corpus opens with readable chapters, including
   prose and cover images. Long chapters, links, lists, and quotes remain
   legible in the bounded rich-text renderer.
-- The footer folder action opens a local EPUB; the header stays empty and
-  no dropdown or library UI appears.
+- The empty reader shows no prompt. Its folder action is the only enabled
+  control; the header stays empty and no dropdown or library UI appears.
 - Chapter changes, search, font adjustment, and restored reading position
   work in a keyboard-only pass.
 - A light and a dark Omarchy palette can be swapped while the same chapter

@@ -7,8 +7,9 @@ not a Quickshell plugin.
 ## What it does
 
 - Opens DRM-free, reflowable EPUB 2 and EPUB 3 books from disk.
-- Shows a centered reading column, table of contents, and book search. Tiny
-  footer icons keep the header empty, following Omawrite's visual approach.
+- Shows a centered reading column, table of contents, and book search. The
+  empty view has only an enabled folder control at the bottom; tiny footer
+  icons keep the header empty, following Omawrite's visual approach.
 - Restores the last chapter and reading position.
 - Follows Omarchy's active palette and desktop text scale without restarting.
 - Opens books in place. No library, upload, account, or network service is used.
@@ -43,6 +44,7 @@ This installs the binary in `~/.local/bin`, the desktop entry in
 `~/.local/share/applications`, and the icon in `~/.local/share/icons`. Remove
 those three installed files to uninstall. It leaves reading state in
 `~/.local/share/Dimas Mufid/omabook` for the reader to decide whether to keep.
+Open **Omabook** from the Omarchy app launcher, or run `omabook` in a terminal.
 
 ## Controls
 
