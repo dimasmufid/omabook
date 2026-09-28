@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "dimasmufid.omabook",
+  "name": "Omabook",
+  "version": "0.2.0",
+  "author": "Dimas Mufid",
+  "license": "MIT",
+  "description": "Open the minimal Omabook EPUB reader from the Omarchy bar.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {
+    "barWidget": "OmabookBarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Omabook",
+    "description": "Launch the separately installed Omabook desktop reader.",
+    "category": "Productivity",
+    "allowMultiple": false,
+    "defaultSection": "left"
+  }
+}

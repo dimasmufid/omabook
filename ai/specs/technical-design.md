@@ -7,8 +7,9 @@ Last updated: 2026-09-28
 
 Omabook is one Qt 6 desktop process. Qt Quick/QML owns the single-window
 reading surface and bottom controls; a C++17 backend owns EPUB parsing, book
-state, search, and Omarchy theme integration. It does not run inside Quickshell
-and has no Omarchy plugin manifest. A `.desktop` entry registers the EPUB MIME
+state, search, and Omarchy theme integration. The reader does not run inside
+Quickshell. A separate, optional bar-widget plugin launches the installed app
+and has a root `manifest.json`. A `.desktop` entry registers the EPUB MIME
 type and passes a selected file to `omabook %f`. `Ctrl+O` and the footer folder
 button use the XDG portal file picker. Opening a book never moves or copies it.
 
@@ -99,6 +100,7 @@ invalid. The app does not write Omarchy configuration. Omawrite's
 
 ```text
 plugins/omabook/
+  manifest.json  OmabookBarWidget.qml
   omabook.pro
   src/{main,readercontroller,epubloader,omarchytheme,systemtheme}.*
   src/qml/{Main,FooterIconButton}.qml
@@ -112,7 +114,10 @@ The user-local installer builds the binary and places it in `~/.local/bin`,
 with a desktop entry and icon under `~/.local/share`. The PKGBUILD is an
 optional system package path. No background daemon or elevated service is
 installed. Build dependencies are Qt 6 base/declarative, libzip, GCC, make,
-and qmake; runtime also needs an XDG desktop portal for the file picker.
+and qmake; runtime also needs an XDG desktop portal for the file picker. The
+Omarchy bar plugin can be installed and enabled with `omarchy plugin add` and
+`omarchy plugin enable` after the desktop app is installed. It adds one icon
+and invokes `gtk-launch omabook` on click.
 
 ## Verification and completion criteria
 
