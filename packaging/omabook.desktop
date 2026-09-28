@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Omabook
+Comment=A quiet EPUB reader for Omarchy
+Exec=omabook %f
+Icon=omabook
+Terminal=false
+Categories=Office;Viewer;
+MimeType=application/epub+zip;
+StartupNotify=true

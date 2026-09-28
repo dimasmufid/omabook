@@ -1,0 +1,25 @@
+pkgname=omabook
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='A quiet EPUB reader for Omarchy'
+arch=('x86_64')
+url='https://github.com/dimasmufid/omabook'
+license=('MIT')
+depends=('qt6-base' 'qt6-declarative' 'libzip' 'xdg-desktop-portal')
+makedepends=('gcc' 'make' 'git')
+source=("$pkgname::git+https://github.com/dimasmufid/omabook.git#tag=v$pkgver")
+sha256sums=('SKIP')
+
+build() {
+  cd "$srcdir/$pkgname"
+  qmake6 omabook.pro -o Makefile
+  make -j"$(nproc)"
+}
+
+package() {
+  cd "$srcdir/$pkgname"
+  install -Dm755 omabook "$pkgdir/usr/bin/omabook"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+  install -Dm644 packaging/omabook.desktop "$pkgdir/usr/share/applications/omabook.desktop"
+  install -Dm644 packaging/omabook.svg "$pkgdir/usr/share/icons/hicolor/scalable/apps/omabook.svg"
+}

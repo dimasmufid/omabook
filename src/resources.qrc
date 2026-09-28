@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="Main.qml">qml/Main.qml</file>
+    <file alias="FooterIconButton.qml">qml/FooterIconButton.qml</file>
+  </qresource>
+</RCC>
